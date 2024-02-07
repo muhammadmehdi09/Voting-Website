@@ -1,25 +1,12 @@
-const memberInput = document.querySelector("#member")
-const img1 = document.getElementById("img")
-const container = document.querySelector("#container")
+const person = document.getElementById("member")
+const image = document.getElementById("img")
+const container = document.getElementById("container")
 
-const images = []
-
-// for (const iterator of object) {
-    
-//     img1.addEventListener("change", () => {
-//         let reader = new FileReader();
-//         reader.readAsDataURL(img1.files[0]);
-//         reader.addEventListener("load", () => {
-//           img2 = `<img src=${reader.result} alt=''/>`;
-//         });
-//       });
-// }
-
-img1.addEventListener("change", () => {
+image.addEventListener("change", () => {
     let reader = new FileReader();
-    reader.readAsDataURL(img1.files[0]);
+    reader.readAsDataURL(image.files[0]);
     reader.addEventListener("load", () => {
-      img2 = `<img src=${reader.result} alt=''/>`;
+      image2 = `<img src=${reader.result} alt=''/>`;
     });
   });
 
@@ -59,17 +46,16 @@ const voteHandler = (index) => {
 
 const submitHandler = () => {
     const member = {
-        name: memberInput.value,
-        image: img2,
+        name: person.value,
+        image: image2,
         vote: 0
     }
     membersData.push(member)
 
-    console.log(memberInput.value);
+    console.log(person.value);
     console.log(membersData);
-    memberInput.value = ""
+    person.value = ""
     loopHandler()
 }
-
 loopHandler()
 

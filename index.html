@@ -8,24 +8,23 @@
     <title>Document</title>
 </head>
 
-<body  class="absolute top-0 bottom-0 right-0 left-0 bg-cover bg-[url(./Flag.png)] main">
+<body class="absolute top-0 bottom-0 right-0 left-0 bg-cover bg-[url(./Images/Flag.png)] main">
     <nav class="flex p-3 bg-green-500">
-        <img src="./Logo.png" alt="Logo" class="sm:w-10 w-7 h-7 sm:h-10">
-        <p class="font-semibold sm:font-extrabold sm:text-3xl text-white ml-5 my-auto font-serif text-md">Pakistan
-            Elections</p>
+        <img src="./Images/Logo.png" alt="Logo" class="sm:w-10 w-7 h-7 sm:h-10">
+        <p class="font-semibold sm:font-extrabold sm:text-3xl text-white ml-5 my-auto font-serif text-md">Pakistan Elections</p>
     </nav>
     <div id="container" class="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 p-auto mt-28 cards"></div>
-    <form onsubmit="submitHandler();return false" enctype="multipart/form-data" method="post" action="http://127.0.0.1:5500/sir/index.html">
-        <input id="member" type="text" class="p-3 border-white border-2 m-5 rounded-xl">
+    <form onsubmit="submitHandler();return false" enctype="multipart/form-data">
+        <input id="member" type="text" class="p-3 border-white border-2 m-5 rounded-xl" required>
 
         <br>
 
         <label for="img"
             class="flex py-auto m-5 mt-7 border-white border-2 p-2  w-[209.6px] text-center rounded-xl hover:cursor-grab text-white">
-            <img src="./upload.png" class="w-10 h-10 mx-2">
+            <img src="./Images/upload.png" class="w-10 h-10 mx-2">
             <p class="mt-[6px]">Upload Image</p>
         </label>
-        <input type="file" id="img" class="bg-white text-white hidden">
+        <input type="file" id="img" class="bg-white text-white hidden" required>
 
         <br>
 
