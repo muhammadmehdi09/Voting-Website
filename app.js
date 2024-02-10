@@ -35,7 +35,7 @@ function dataExpresser() {
     }
 }
 
-function deleter(index){
+function deleter(index) {
     people.splice(index, 1)
     dataExpresser()
 }
@@ -53,17 +53,21 @@ function formSubmiter() {
         image: image2,
         vote: 0
     }
-if(name.value.length() < 4){
-    alert("The length of the name should be greater then 4 charachters")
-}
- if (people.some(data => data.name === name.value)) {
+
+
+
+    if (name.value.length < 2) {
+        alert("The length of the name should be greater then 2 charachters")
+    }
+
+    else if (people.some(data => data.name === name.value)) {
         alert("Can not add the same name twice.")
     }
 
-  else{
-    people.push(data)
-    dataExpresser()
-  }
+    else {
+        people.push(data)
+        dataExpresser()
+    }
 }
 dataExpresser()
 
