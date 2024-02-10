@@ -53,11 +53,13 @@ function formSubmiter() {
         image: image2,
         vote: 0
     }
-
+if(name.value.length() < 4){
+    alert("The length of the name should be greater then 4 charachters")
+}
  if (people.some(data => data.name === name.value)) {
-        alert("Can't add the same member twice.");
-        return;
+        alert("Can not add the same name twice.")
     }
+
   else{
     people.push(data)
     dataExpresser()
